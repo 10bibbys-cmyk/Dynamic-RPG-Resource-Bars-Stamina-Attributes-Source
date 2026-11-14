@@ -1,0 +1,66 @@
+plugins {
+    id 'fabric-loom' version '1.7.4'
+    id 'maven-publish'
+}
+
+version = '1.0.2.1'
+group = 'dev.drbsaaddon'
+
+base {
+    archivesName = 'dynamic-rpg-resource-bars-stamina-attributes-addon'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'CurseMaven'
+                url = 'https://www.cursemaven.com'
+            }
+        }
+        filter {
+            includeGroup 'curse.maven'
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.20.1'
+    mappings 'net.fabricmc:yarn:1.20.1+build.10:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.16.14'
+    modCompileOnly 'net.fabricmc.fabric-api:fabric-api:0.92.2+1.20.1'
+
+    // Exact Path of the Ascended production targets.
+    modCompileOnly 'curse.maven:dynamic-rpg-resource-bars-1188180:7213039'
+    modCompileOnly 'maven.modrinth:QKOE26gD:uGS4pXoe'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

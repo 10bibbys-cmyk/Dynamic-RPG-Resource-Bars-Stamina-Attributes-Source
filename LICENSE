@@ -1,0 +1,44 @@
+Dynamic RPG Resource Bars — Stamina Attributes Addon
+Source-Available Notice (All Rights Reserved for original addon material)
+Copyright © 2026 Path of the Ascended. All Rights Reserved.
+
+The source files in this repository are made available to support transparency,
+compatibility review, and private verification. This notice is NOT a recognised
+open-source licence for original material owned exclusively by Path of the Ascended.
+
+For original portions to which we hold all necessary rights, we allow viewing,
+cloning, downloading, and locally compiling the source for non-commercial,
+private inspection and verification, subject to these conditions:
+- Preserve copyright and attribution notices.
+- Do not republish, redistribute, rehost, sublicense, sell, or incorporate
+  those original portions into other distributed projects without prior
+  written permission from the rights holder.
+- Do not distribute locally compiled versions or modified versions of those
+  original portions without prior written permission.
+
+EXISTING RIGHTS AND THIRD-PARTY LICENCES TAKE PRIORITY
+
+This notice does not override rights provided by applicable law, GitHub's
+Terms of Service, or any applicable third-party licences.
+
+Dynamic RPG Resource Bars (MuonR) publishes its source code under GPLv3 and
+its artwork under separate, All Rights Reserved terms with a limited licence
+for dependent resource packs and addons. Any code that is derived from or
+legally subject to the upstream GPLv3 remains subject to GPLv3; this notice
+does not relicense or restrict that code.
+
+The included cyan stamina texture is a compatibility artwork asset associated
+with Dynamic RPG Resource Bars. Its distribution here is only as part of this
+addon, which requires the original mod to be installed and active. It is NOT
+available for independent extraction or redistribution under the addon code
+permission stated above. Refer to the upstream Artwork licence.
+
+Stamina Attributes and other third-party projects retain their separate
+copyrights and licence terms. See NOTICE.md for attribution and source links.
+
+Official compiled mod files distributed through approved mod platforms remain
+subject to their applicable release terms; this source notice does not
+override rights granted by upstream licences or applicable law.
+
+For permission requests concerning original Path of the Ascended material,
+contact the project maintainer.

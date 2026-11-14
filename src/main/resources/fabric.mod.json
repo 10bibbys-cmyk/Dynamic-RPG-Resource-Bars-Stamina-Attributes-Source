@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dynamic_resource_bars_stamina_attributes",
+  "version": "1.0.2.1",
+  "name": "Dynamic RPG Resource Bars - Stamina Attributes Addon",
+  "description": "Adds an independently editable Stamina Attributes HUD bar to Dynamic RPG Resource Bars 0.8.1, keeping vanilla hunger and preserving armor text ALWAYS.",
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "mixins": [
+    {
+      "config": "dynamic_resource_bars_stamina_attributes.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "dynamic_resource_bars": "0.8.1",
+    "staminaattributes": "1.6.0"
+  }
+}

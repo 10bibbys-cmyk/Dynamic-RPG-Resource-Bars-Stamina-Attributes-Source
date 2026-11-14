@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "dev.drbsaaddon.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "StaminaBarRendererAccessor",
+    "StaminaAttributesProviderMixin",
+    "StaminaAttributesHudMixin",
+    "InGameHudMixin",
+    "HudEditorScreenMixin",
+    "ResizeElementScreenMixin",
+    "StaminaBarRendererMixin",
+    "ArmorBarTextAlwaysMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

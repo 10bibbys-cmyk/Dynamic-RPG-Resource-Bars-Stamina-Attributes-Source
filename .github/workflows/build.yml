@@ -1,0 +1,30 @@
+name: Verify source snapshot
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+      - name: Validate metadata
+        run: |
+          python3 -m json.tool src/main/resources/fabric.mod.json > /dev/null
+          python3 -m json.tool src/main/resources/dynamic_resource_bars_stamina_attributes.mixins.json > /dev/null
+      - name: Build snapshot
+        run: gradle --no-daemon clean build
